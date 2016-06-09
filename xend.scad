@@ -7,26 +7,51 @@ module rotarybearing(){
         cylinder(7, d = 8, true);
     }
 }
-module main(){
+module xend(){
     difference(){
-        rotate([90, 90, 0]){
-            hull(){
-                translate([0, 20, -20]){
-                    cylinder(40, d = 12, true);
+        
+        cube([75, 75, 10], center = true);
+
+        translate([0, 0, -5]){
+            bearing();
+        }
+        rotate([0, 0, 90]){
+            translate([0, 250, 0]){
+                translate([25, 0]){
+                    bearing();
                 }
-                translate([0, -20, -20]){
-                    cylinder(40, d = 12, true);
+                translate([-25, 0, 0]){
+                    bearing();
                 }
             }
         }
-        translate([15, 0, -5]){
-            bearing();
-        }
-        translate([-15, 0, -5]){
-            bearing();
-        }
+    }
+    translate([0, 25, 0]){
+        bearingmount();
+    }
+    translate([0, -25, 0]){
+        bearingmount();
     }
 }
 
+module bearingmount(){
+    difference(){
+        union(){
+            difference(){
+                cylinder(15, d =24, true);
+                translate([0, 0, 9]){
+                    cube([14, 25, 8], true);
+                }
+            }
+            translate([0, 0, 13]){
+                cylinder(15, d =8, true);
+            }  
+            translate([0, 0, 14]){
+                cylinder(5, d =12, true);
+            }
+        }
+        cylinder(30, d = 4, true);
+    }
+}
 
-main();
+xend();
