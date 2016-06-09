@@ -6,7 +6,7 @@ module screwhole(){
 module yend(){
     difference(){
         union(){
-            cube([75, 75, 10], center = true);
+            cube([25, 75, 10], center = true);
             translate([0, 0, 0]){
                 bearingmount();
             }

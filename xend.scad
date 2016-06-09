@@ -10,7 +10,7 @@ module rotarybearing(){
 module xend(){
     difference(){
         
-        cube([75, 75, 10], center = true);
+        cube([25, 75, 10], center = true);
 
         translate([0, 0, -5]){
             bearing();
