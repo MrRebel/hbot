@@ -9,7 +9,7 @@ module bearing(){
 		}
 	}
 }
-module main(){
+module xcarriage(){
 	difference(){
 		minkowski(){
 			cube([57,52,8],true);
@@ -28,4 +28,4 @@ module main(){
 	}
 }
 
-main();
+xcarriage();
