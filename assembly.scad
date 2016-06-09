@@ -1,10 +1,18 @@
 use <xend.scad>
 use<xcarriage.scad>
 use<yend.scad>
+use<alminumextrustion.scad>
 $fn = 50;
+
+rotate([0, 90, 0]){
+    translate([20, 250, 0]){ 
+        1010Profile(600);   
+    }
+}
 
 rotate([0, 0, 90]){
     xcarriage();
+    
     translate([-25, 0, 0]){
         bearing();
     }
@@ -15,7 +23,9 @@ rotate([0, 0, 90]){
 translate([250, 0, 0]){
     xend();
     translate([0, 250, -5]){
-        yend();
+        rotate([0, 0, 90]){
+            yend();
+        }
     }
     translate([0, 0, -5]){
         bearing();
@@ -26,7 +36,9 @@ translate([-250, 0, 0]){
         xend();
     }
     translate([0, 250, -5]){
-        yend();
+        rotate([0, 0, 90]){
+            yend();
+        }
     }
     translate([0, 0, -5]){
         bearing();
