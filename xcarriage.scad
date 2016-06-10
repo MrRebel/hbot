@@ -22,7 +22,10 @@ module xcarriage(){
 		translate([25,0,-8]){
 			bearing();
 		}
-		translate([-25,0,-8]){
+		translate([-25,20,-8]){
+			bearing();
+		}
+		translate([-25,-20,-8]){
 			bearing();
 		}
 	}
