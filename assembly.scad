@@ -4,8 +4,18 @@ use<yend.scad>
 use<alminumextrustion.scad>
 $fn = 50;
 
+module rod(){
+	rotate([90,0,0]){
+		cylinder(24.3,7.65,7.65,true);
+		cylinder(500,5,5,true);
+		difference(){
+			cylinder(4,10,10,true);
+			cylinder(4.5,8.5,8.5,true);
+		}
+	}
+}
 rotate([0, 90, 0]){
-    
+
     translate([20, 250, 0]){ 
         1010Profile(600);   
     }
@@ -37,10 +47,10 @@ rotate([0, 0, 90]){
     xcarriage();
     
     translate([-25, 0, 0]){
-        bearing();
+        rod();
     }
     translate([25, 0, 0]){
-        bearing();
+        rod();
     }
 }    
 translate([250, 0, 0]){
@@ -51,7 +61,7 @@ translate([250, 0, 0]){
         }
     }
     translate([0, 0, -5]){
-        bearing();
+        rod();
     }
 }
 translate([-250, 0, 0]){
@@ -64,6 +74,6 @@ translate([-250, 0, 0]){
         }
     }
     translate([0, 0, -5]){
-        bearing();
+        rod();
     }
 }
