@@ -2,6 +2,7 @@ use <xend.scad>
 use<xcarriage.scad>
 use<yend.scad>
 use<alminumextrustion.scad>
+use<extrusioncorner.scad>
 $fn = 50;
 
 module rod(){
@@ -17,18 +18,18 @@ module rod(){
 rotate([0, 90, 0]){
 
     translate([20, 250, 0]){ 
-        1010Profile(600);   
+        1010Profile(500);   
     }
     translate([20, -250, 0]){ 
-        1010Profile(600);   
+        1010Profile(500);   
     }
 }
 rotate([90, 0, 0]){
-    translate([270, -40, 0]){ 
-        1010Profile(600);   
+    translate([270, -20, 0]){ 
+        1010Profile(500);   
     }
-    translate([-270, -40, 0]){ 
-        1010Profile(600);   
+    translate([-270, -20, 0]){ 
+        1010Profile(500);   
     }
 }
 translate([250, 250, -330]){
