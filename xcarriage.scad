@@ -9,15 +9,38 @@ module bearing(){
 		}
 	}
 }
+module e3dlite(){
+    translate([0,0,24 + 3.7/2]){
+        cylinder(3.9,8,8,true);
+    }
+    translate([0,0,21]){
+        cylinder(6.1,6,6,true);
+    }
+    translate([0,0,16.5]){
+        cylinder(3.2,8,8,true);
+    }
+    cylinder(30,11.5,11.5,true);
+}
 module xcarriage(){
 	difference(){
-		minkowski(){
-			cube([57,52,8],true);
-			cylinder(8,5,5,true);
-			sphere(4);
-		}
-		translate([0,0,-18]){
-			cube([75,80,20],true);
+        union(){
+            minkowski(){
+                cube([57,52,22],true);
+                cylinder(8,5,5,true);
+                sphere(4);
+            }
+            minkowski(){
+                translate([0,35,0]){
+                    cylinder(40,12,12,true);
+                }
+                sphere(4);
+            }
+        }
+		translate([0,0,-25]){
+			cube([76,110,20],true);
+		}	
+        translate([0,0,25]){
+			cube([76,70,20],true);
 		}	
 		translate([25,0,-8]){
 			bearing();
@@ -28,7 +51,9 @@ module xcarriage(){
 		translate([-25,-20,-8]){
 			bearing();
 		}
+        translate([0,35,0]){
+            e3dlite();
+        }
 	}
 }
-
 xcarriage();
