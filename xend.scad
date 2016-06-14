@@ -14,12 +14,12 @@ module xend(){
         hull(){
           rotate([0, 90, 0]){
             translate([0, 25, -20]){
-                cylinder(40, d = 20, true);
+                cylinder(40, d = 15, true);
             }
           }
           rotate([0, 90, 0]){
             translate([0, -25, -20]){
-                cylinder(40, d = 20, true);
+                cylinder(40, d = 15, true);
             }
           }
       }
@@ -45,10 +45,10 @@ module xend(){
  
     }
     clamp();
-    translate([0, 20, 10]){
+    translate([0, 15, 7.5]){
         bearingmount();
     }
-    translate([0, -20, 10]){
+    translate([0, -15, 7.5]){
         bearingmount();
     }
     
@@ -61,12 +61,12 @@ module rodmount(){
                 hull(){
           rotate([0, 90, 0]){
             translate([0, 25, -20]){
-                cylinder(40, d = 20, true);
+                cylinder(40, d = 15, true);
             }
           }
           rotate([0, 90, 0]){
             translate([0, -25, -20]){
-                cylinder(40, d = 20, true);
+                cylinder(40, d = 15, true);
             }
           }
       }
