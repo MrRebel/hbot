@@ -1,5 +1,6 @@
 use <xend.scad>
 use <xcarriage.scad>
+$fn = 50;
 module screwhole(){
     cylinder(15, d = 10, center = true);
 }
@@ -26,13 +27,13 @@ module yend(){
                       cylinder(60, d = 13, center = true);
                   }
               }
-              translate([-31, 0, 0]){
-                cube([19, 25, 5], center = true);
+              translate([-31, 8, 0]){
+                cube([19, 8, 5], center = true);
               }
 
 
         }
-        translate([-31, 0, 0]){
+        translate([-31, 12.5, 0]){
           cube([20, 25, 2], center = true);
         }
         rotate([0, 0, 90]){
@@ -47,18 +48,13 @@ module yend(){
             screwhole();
         }
 
-        translate([-35,9, 0]) {
+        translate([-30,9, 0]) {
             cylinder(10, d = 4, center = true);
         }
-        translate([-25,9, 0]) {
+        translate([-30,-9, 0]) {
             cylinder(10, d = 4, center = true);
         }
-        translate([-35,-9, 0]) {
-            cylinder(10, d = 4, center = true);
-        }
-        translate([-25,-9, 0]) {
-            cylinder(10, d = 4, center = true);
-        }
+
 
     }
 }
