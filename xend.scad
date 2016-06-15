@@ -42,10 +42,10 @@ module xend(){
           }
     }
     clamp();
-    translate([0, 15, 7.5]){
+    translate([-24, 15, 7.5]){
         bearingmount();
     }
-    translate([0, -15, 7.5]){
+    translate([-24, -15, 7.5]){
         bearingmount();
     }
 
