@@ -26,14 +26,14 @@ module yend(){
                       cylinder(60, d = 13, center = true);
                   }
               }
-              translate([-10, 0, 0]){
-                cube([60, 25, 5], center = true);
+              translate([-31, 0, 0]){
+                cube([19, 25, 5], center = true);
               }
 
 
         }
-        translate([-10, 0, 0]){
-          cube([60, 25, 2], center = true);
+        translate([-31, 0, 0]){
+          cube([20, 25, 2], center = true);
         }
         rotate([0, 0, 90]){
             translate([0, 240, 0]){
