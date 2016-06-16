@@ -42,10 +42,10 @@ module xend(){
           }
     }
     clamp();
-    translate([-24, 15, 7.5]){
+    translate([-12, 15, 7.5]){
         bearingmount();
     }
-    translate([-24, -15, 7.5]){
+    translate([-12, -15, 7.5]){
         bearingmount();
     }
 
@@ -117,7 +117,7 @@ module clamp(){
               cube([35,9,4], center = true);
           }
 
-          translate([-39, -41, 0]){
+          translate([-37, -41, 0]){
               cube([40, 32, 1], center = true);
           }
 
@@ -133,7 +133,7 @@ module clamp(){
               cube([35,9,4], center = true);
           }
 
-          translate([-39, 41, 0]){
+          translate([-37, 41, 0]){
               cube([40, 32, 1], center = true);
           }
 
