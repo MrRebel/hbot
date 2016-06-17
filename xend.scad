@@ -7,7 +7,7 @@ module rotarybearing(){
         cylinder(7, d = 8, true);
     }
 }
-module xend(){
+module main(){
     difference(){
           union(){
             hull(){
@@ -37,18 +37,16 @@ module xend(){
                   }
               }
           }
-          translate([0, 0, -10]){
+          translate([0, 0, -5]){
               bearing();
           }
     }
-    clamp();
     translate([-12, 15, 7.5]){
         bearingmount();
     }
     translate([-12, -15, 7.5]){
         bearingmount();
     }
-
 }
 
 module rodmount(){
@@ -117,10 +115,6 @@ module clamp(){
               cube([35,9,4], center = true);
           }
 
-          translate([-37, -41, 0]){
-              cube([40, 32, 1], center = true);
-          }
-
           translate([-28, -36, 0]){
               cylinder(10, d = 4, center = true);
           }
@@ -133,9 +127,7 @@ module clamp(){
               cube([35,9,4], center = true);
           }
 
-          translate([-37, 41, 0]){
-              cube([40, 32, 1], center = true);
-          }
+
 
          translate([-28, 36, 0]){
               cylinder(10, d = 4, center = true);
@@ -145,5 +137,23 @@ module clamp(){
           }
       }
   }
+}
+module xend(){
+   difference(){
+        union(){
+            main();
+            clamp();
+            
+        }
+   
+          translate([-34, -40, 0]){
+              cube([50, 32, 1], center = true);
+          }
+          translate([-34, 40, 0]){
+              cube([50, 32, 1], center = true);
+          }
+
+    }
+    
 }
 xend();
