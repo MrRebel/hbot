@@ -23,8 +23,7 @@ module main(){
               }
           }
 
-          rodmount();
-
+          rodmount();         
       }
 
           rotate([0, 0, 90]){
@@ -42,10 +41,10 @@ module main(){
           }
     }
     translate([-12, 15, 7.5]){
-        bearingmount();
+       // bearingmount();
     }
     translate([-12, -15, 7.5]){
-        bearingmount();
+       // bearingmount();
     }
 }
 
@@ -77,12 +76,6 @@ module rodmount(){
                         }
                     }
                 }
-                translate([-70, -41, 0]){
-                    cube([40, 30, 2], center = true);
-                }
-                translate([-70, 41, 0]){
-                    cube([40, 30, 2], center = true);
-                }
             }
 
         }
@@ -111,30 +104,41 @@ module bearingmount(){
 module clamp(){
   translate([10, 0, 0]){
       difference(){
-          translate([-37, -35, 0]){
-              cube([35,9,4], center = true);
-          }
-
-          translate([-28, -36, 0]){
-              cylinder(10, d = 4, center = true);
-          }
-          translate([-45, -36, 0]){
-              cylinder(10, d = 4, center = true);
-          }
+            translate([-37, -25, 10]){
+                rotate([90, 0, 0]){
+                    cube([35,9,4], center = true);
+                }
+            }
+          rotate([90, 0, 0]){
+              translate([-28, 10, 25]){
+                  cylinder(10, d = 4, center = true);
+              }
+          }   
+          rotate([90, 0, 0]){
+              translate([-45, 10, 25]){
+                  cylinder(10, d = 4, center = true);
+              }
+        }
       }
       difference(){
-          translate([-37, 35, 0]){
-              cube([35,9,4], center = true);
+          translate([-37, 25, 10]){
+              rotate([90, 0, 0]){
+                cube([35,9,4], center = true);
+              }
           }
 
 
 
-         translate([-28, 36, 0]){
-              cylinder(10, d = 4, center = true);
-          }
-          translate([-45, 36, 0]){
-              cylinder(10, d = 4, center = true);
-          }
+          rotate([90, 0, 0]){
+              translate([-28, 10, -25]){
+                  cylinder(10, d = 4, center = true);
+              }
+          }   
+          rotate([90, 0, 0]){
+              translate([-45, 10, -25]){
+                  cylinder(10, d = 4, center = true);
+              }
+        }
       }
   }
 }
@@ -142,17 +146,27 @@ module xend(){
    difference(){
         union(){
             main();
-            clamp();
-            
+                clamp();
         }
    
-          translate([-34, -40, 0]){
-              cube([50, 32, 1], center = true);
+         translate([-30, -25, 10]){
+              rotate([90, 90, 0]){
+                cube([20, 40, 1], center = true);
+              }
+         }
+          translate([-30, 25, 10]){
+              rotate([90, 90, 0]){
+                cube([20, 40, 1], center = true);
+              }
           }
-          translate([-34, 40, 0]){
-              cube([50, 32, 1], center = true);
+         translate([-10, -25, 0]){
+                cube([1, 20, 20], center = true);
+              
+         }
+          translate([-10, 25, 0]){
+                cube([1, 20, 20], center = true);
+              
           }
-
     }
     
 }
