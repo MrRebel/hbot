@@ -40,11 +40,11 @@ module main(){
               bearing();
           }
     }
-    translate([-12, 15, 7.5]){
-       // bearingmount();
+    translate([5, 15, 7.5]){
+        bearingmount();
     }
-    translate([-12, -15, 7.5]){
-       // bearingmount();
+    translate([5, -15, 7.5]){
+        bearingmount();
     }
 }
 
@@ -86,7 +86,7 @@ module bearingmount(){
     difference(){
         union(){
             difference(){
-                cylinder(10, d =24, true);
+                cylinder(10, d =20, true);
                 translate([0, 0, 5]){
                     cube([14, 25, 8], true);
                 }
@@ -159,12 +159,12 @@ module xend(){
                 cube([20, 40, 1], center = true);
               }
           }
-         translate([-10, -25, 0]){
-                cube([1, 20, 20], center = true);
+         translate([-10, -25, 5]){
+                cube([1, 20, 25], center = true);
               
          }
-          translate([-10, 25, 0]){
-                cube([1, 20, 20], center = true);
+          translate([-10, 25, 5]){
+                cube([1, 20, 25], center = true);
               
           }
     }
