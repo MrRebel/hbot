@@ -1,6 +1,10 @@
 use <xcarriage.scad>
 $fn = 50;
-
+module xrod(){
+	rotate([90,0,0]){
+		cylinder(500, d = 8.2,true);
+	}    
+}
 module rotarybearing(){
     difference(){
         cylinder(7, d =22, true);
@@ -69,10 +73,10 @@ module rodmount(){
                 rotate([0, 0, 90]){
                     translate([0, 300, 0]){
                         translate([25, 5, 0]){
-                            bearing();
+                            xrod();
                         }
                         translate([-25, 5, 0]){
-                            bearing();
+                            xrod();
                         }
                     }
                 }
@@ -171,3 +175,4 @@ module xend(){
     
 }
 xend();
+//xrod();
