@@ -71,7 +71,7 @@ module rodmount(){
           }
            union(){
                 rotate([0, 0, 90]){
-                    translate([0, 300, 0]){
+                    translate([0, 380, 0]){
                         translate([25, 5, 0]){
                             xrod();
                         }
@@ -87,6 +87,7 @@ module rodmount(){
 
 }
 module bearingmount(){
+    
     difference(){
         union(){
             difference(){
@@ -103,6 +104,12 @@ module bearingmount(){
             }
         }
         cylinder(30, d = 4, true);
+        translate([0, 8, 5]){
+            cube([20, 5, 10], center = true);
+        }
+        translate([0, -8, 5]){
+            cube([20, 5, 10], center = true);
+        }
     }
 }
 module clamp(){
@@ -110,7 +117,7 @@ module clamp(){
       difference(){
             translate([-37, -25, 10]){
                 rotate([90, 0, 0]){
-                    cube([35,9,4], center = true);
+                    cube([35,9,7], center = true);
                 }
             }
           rotate([90, 0, 0]){
@@ -127,7 +134,7 @@ module clamp(){
       difference(){
           translate([-37, 25, 10]){
               rotate([90, 0, 0]){
-                cube([35,9,4], center = true);
+                cube([35,9,7], center = true);
               }
           }
 
@@ -147,6 +154,7 @@ module clamp(){
   }
 }
 module xend(){
+
    difference(){
         union(){
             main();
@@ -155,12 +163,12 @@ module xend(){
    
          translate([-30, -25, 10]){
               rotate([90, 90, 0]){
-                cube([20, 40, 1], center = true);
+                cube([20, 40, 3], center = true);
               }
          }
           translate([-30, 25, 10]){
               rotate([90, 90, 0]){
-                cube([20, 40, 1], center = true);
+                cube([20, 40, 3], center = true);
               }
           }
          translate([-10, -25, 5]){
@@ -172,7 +180,6 @@ module xend(){
               
           }
     }
-    
+       
 }
 xend();
-//xrod();
