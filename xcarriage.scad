@@ -153,6 +153,25 @@ module xcarriage(){
 		}
 	}
 }
-xcarriage();
+//xcarriage();
+
+module top(){
+	difference(){
+		xcarriage();
+		translate([0,0,-3.5]){
+			cube([110,110,40],true);
+		}
+	}
+}
+module bottom(){
+	intersection(){
+		xcarriage();
+		translate([0,0,-3.5]){
+			cube([110,110,40],true);
+		}
+	}
+}
+top();
+//bottom();	
 //minktest(15,15,1);
 //thing();
