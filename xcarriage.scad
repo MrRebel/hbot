@@ -95,7 +95,7 @@ module xcarriage(){
 		translate([0,0,-21]){
 			cube([76,110,20],true);
 		}
-        translate([0,0,29]){
+        translate([0,-20,29]){
 			cube([76,110,20],true);
 		}
 		translate([10,44.5,20]){
@@ -153,7 +153,7 @@ module xcarriage(){
 		}
 	}
 }
-//xcarriage();
+xcarriage();
 
 module top(){
 	difference(){
@@ -171,7 +171,7 @@ module bottom(){
 		}
 	}
 }
-top();
+//top();
 //bottom();	
 //minktest(15,15,1);
 //thing();
