@@ -158,7 +158,7 @@ module xend(){
    difference(){
         union(){
             main();
-                clamp();
+            clamp();
         }
    
          translate([-30, -25, 10]){
