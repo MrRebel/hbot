@@ -2,7 +2,7 @@ use <xcarriage.scad>
 $fn = 50;
 module xrod(){
 	rotate([90,0,0]){
-		cylinder(500, d = 8.2,true);
+		 cylinder(500, d = 8.2,true);
 	}    
 }
 module rotarybearing(){
@@ -30,16 +30,16 @@ module main(){
           rodmount();         
       }
 
-          rotate([0, 0, 90]){
-              translate([0, 250, 0]){
-                  translate([25, 5, 0]){
-                      bearing();
-                  }
-                  translate([-25, 5, 0]){
-                      bearing();
-                  }
-              }
-          }
+//          rotate([0, 0, 90]){
+//              translate([0, 250, 0]){
+//                  translate([25, 5, 0]){
+//                      bearing();
+//                  }
+//                  translate([-25, 5, 0]){
+//                      bearing();
+//                  }
+//              }
+//          }
           translate([0, 0, -5]){
               bearing();
           }
@@ -90,16 +90,11 @@ module bearingmount(){
     
     difference(){
         union(){
-            difference(){
-                cylinder(10, d =20, true);
-                translate([0, 0, 5]){
-                    cube([14, 25, 8], true);
-                }
-            }
-            translate([0, 0, 10]){
+
+            translate([0, 0, 0]){
                 cylinder(7, d =8, true);
             }
-            translate([0, 0, 10]){
+            translate([0, 0, 0]){
                 cylinder(1, d =12, true);
             }
         }
