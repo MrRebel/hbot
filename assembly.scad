@@ -38,9 +38,7 @@ translate([250, 250, -330]){
 translate([-250, 250, -330]){
     1010Profile(600);
 }
-translate([250, -250, -330]){
-    1010Profile(600);
-}
+//translate([250, -250, -330]){
 translate([-250, -250, -330]){
     1010Profile(600);
 }
