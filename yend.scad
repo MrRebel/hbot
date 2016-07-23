@@ -2,7 +2,8 @@ use <xend.scad>
 use <xcarriage.scad>
 $fn = 50;
 module screwhole(){
-    cylinder(15, d = 10, center = true);
+    cylinder(15, d = 10.2, center = true);
+	cylinder(30, d = 4.2, center = true);
 }
 module yend(){
     difference(){
@@ -30,10 +31,10 @@ module yend(){
                     bearing();
             }
         }
-        translate([0, 30, 0]){
+        translate([0, 30, 5]){
             screwhole();
         }
-        translate([0, -30, 0]){
+        translate([0, -30, 5]){
             screwhole();
         }
 
