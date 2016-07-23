@@ -10,7 +10,7 @@ module yend(){
             rotate([90, 0, 90]){
               hull(){
                 translate([37.5, 0, 0]){
-                cylinder(40, d = 15, center = true);
+                 cylinder(40, d = 15, center = true);
                 }
                 translate([-37.5, 0, 0]){
                   cylinder(40, d = 15, center = true);
@@ -21,17 +21,6 @@ module yend(){
             translate([0, 0, 7.5]){
                 bearingmount();
             }
-
-              rotate([90, 90, 90]){
-                  translate([0, 0, -10]){
-                      cylinder(60, d = 13, center = true);
-                  }
-              }
-              translate([-31, 8, 0]){
-                cube([19, 8, 5], center = true);
-              }
-
-
         }
         translate([-31, 12.5, 0]){
           cube([20, 25, 2], center = true);
