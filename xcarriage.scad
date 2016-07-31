@@ -36,9 +36,12 @@ module minktest(a,l,w) {
 		cylinder(.1,w,w);
 	}
 }
+module catch(){
+    cylinder(8,.75,.75,true,$fn=4);
+}
 module thing(){
 	translate([0, -10, 5]) {
-			cylinder(20,11.5,15,true);
+			cylinder(15,11.5,15,true);
 	}
 	translate([0,-10,0]){
 		rotate([0,0,0]){
@@ -59,15 +62,15 @@ module thing(){
 	difference(){
 		hull(){
 			translate([0,-10,0]){
-				cylinder(10,11.5,11.5,true);
+				cylinder(5,11.5,11.5,true);
 			}
-			translate([0,15,-5]){
+			translate([0,15,-4]){
 				cylinder(20,11.5,11.5,true);
 			}
 		}
 	}
 	hull(){
-			translate([0,15,-5]){
+			translate([0,15,-4]){
 				cylinder(20,11.5,11.5,true);
 			}
 			translate([0,25,-7.5]){
@@ -86,8 +89,8 @@ module xcarriage(){
             }
 		
             minkowski(){
-                translate([0,35,0]){
-                    cylinder(48,12,12,true);
+                translate([0,20,0]){
+                    cylinder(48,11,11,true);
                 }
                 sphere(4);
             }
@@ -95,7 +98,7 @@ module xcarriage(){
 		translate([0,0,-21]){
 			cube([76,110,20],true);
 		}
-        translate([0,-20,29]){
+        translate([0,-35,29]){
 			cube([76,110,20],true);
 		}
 		translate([10,44.5,20]){
@@ -113,44 +116,57 @@ module xcarriage(){
 		translate([-25,-20,-8]){
 			bearing();
 		}
-        translate([0,35,4]){
+        translate([0,20,4]){
             e3dlite();
         }
-		translate([0,47,0]){
+		translate([0,32,0]){
 			rotate([90,0,0]) {
 				minktest(15,2,1);
 			}
 		}
-		translate([0,47,-5]){
+		translate([0,32,-5]){
 			rotate([90,0,0]) {
 				minktest(15,2,1);
 			}
 		}
-		translate([0,47,-11]){
+		translate([0,32,-11]){
 			rotate([90,0,0]) {
 				minktest(15,2,1);
 			}
 		}
-		translate([0,47,-16]){
+		translate([0,32,-16]){
 			rotate([90,0,0]) {
 				minktest(15,2,1);
 			}
 		}
-		translate([0,47,-21]){
+		translate([0,32,-21]){
 			rotate([90,0,0]) {
 				minktest(15,2,1);
 			}
 		}
-		translate([12.5,13.5,11.5]){
+		translate([12.5,13.5-15,11.5]){
 			rotate([0,0,30])
 			thing();
 		}
-		translate([0,-20,12]){
+		translate([-5,-20,12]){
 			cylinder(40,10,10,true);
 		}
-		translate([0,-20,0]){
+		translate([-5,-20,0]){
 			cylinder(40,6,6,true);
 		}
+        translate([-16,0,5]){
+            cube([4,100,8],true);
+        }
+        translate([10,-35,-1]){
+            rotate([90,0,0]){
+                cylinder(20,1.5,1.5,true);
+            }
+        }
+        translate([10,-35,11]){
+            rotate([90,0,0]){
+                cylinder(20,1.5,1.5,true);
+            }
+        }
 	}
 }
 xcarriage();
@@ -175,3 +191,4 @@ module bottom(){
 //bottom();	
 //minktest(15,15,1);
 //thing();
+//catch();
