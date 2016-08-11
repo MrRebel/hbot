@@ -38,6 +38,19 @@ module minktest(a,l,w) {
 }
 module catch(){
     cylinder(8,.75,.75,true,$fn=4);
+	translate([2,0,0]){
+		cylinder(8,.75,.75,true,$fn=4);
+	}
+	translate([-2,0,0]){
+		cylinder(8,.75,.75,true,$fn=4);
+	}
+	translate([4,0,0]){
+		cylinder(8,.75,.75,true,$fn=4);
+	}
+	translate([-4,0,0]){
+		cylinder(8,.75,.75,true,$fn=4);
+	}
+	
 }
 module thing(){
 	translate([0, -10, 5]) {
@@ -164,7 +177,20 @@ module xcarriage(){
         }
         translate([10,-35,11]){
             rotate([90,0,0]){
+                #cylinder(20,1.5,1.5,true);
+            }
+        }
+		translate([22,35,5]){
+			catch();
+		}
+		translate([22,35,-1]){
+            rotate([90,0,0]){
                 cylinder(20,1.5,1.5,true);
+            }
+        }
+        translate([22,35,11]){
+            rotate([90,0,0]){
+                #cylinder(20,1.5,1.5,true);
             }
         }
 	}
