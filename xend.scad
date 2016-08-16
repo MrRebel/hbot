@@ -12,7 +12,7 @@ module bearingmount(){
                 cylinder(1, d =12, true);
             }
         }
-        cylinder(30, d = 4, true);
+        #cylinder(30, d = 4, true);
 
     }
 }
@@ -72,7 +72,7 @@ module main(){
       }
     }
     translate([0, 0, -5]){
-      bearing();
+      #bearing();
     }
 
   }

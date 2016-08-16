@@ -5,6 +5,22 @@ module screwhole(){
     cylinder(15, d = 10.2, center = true);
 	cylinder(30, d = 4.2, center = true);
 }
+module ybearingmount(){
+
+    difference(){
+        union(){
+
+            translate([0, 0, 0]){
+                cylinder(12, d =8, true);
+            }
+            translate([0, 0, 0]){
+                cylinder(5, d =12, true);
+            }
+        }
+        cylinder(30, d = 4, true);
+
+    }
+}
 module yend(){
     difference(){
         union(){
@@ -20,7 +36,7 @@ module yend(){
             }
             //cube([25, 75, 10], center = true);
             translate([0, 0, 7.5]){
-                bearingmount();
+                ybearingmount();
             }
         }
         translate([-31, 12.5, 0]){
