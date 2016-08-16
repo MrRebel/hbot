@@ -5,22 +5,6 @@ module screwhole(){
     cylinder(15, d = 10.2, center = true);
 	cylinder(30, d = 4.2, center = true);
 }
-module ybearingmount(){
-
-    difference(){
-        union(){
-
-            translate([0, 0, 0]){
-                cylinder(12, d =8, true);
-            }
-            translate([0, 0, 0]){
-                cylinder(5, d =12, true);
-            }
-        }
-        cylinder(30, d = 4, true);
-
-    }
-}
 module yend(){
     difference(){
         union(){
@@ -33,11 +17,17 @@ module yend(){
                   cylinder(40, d = 15, center = true);
                 }
               }
+              hull(){
+                translate([16, 0, 10]){
+                 cylinder(60, d = 15, center = true);
+                }
+                translate([-16, 0, 10]){
+                  cylinder(60, d = 15, center = true);
+                }
+              }
             }
             //cube([25, 75, 10], center = true);
-            translate([0, 0, 7.5]){
-                ybearingmount();
-            }
+
         }
         translate([-31, 12.5, 0]){
           cube([20, 25, 2], center = true);
@@ -53,15 +43,24 @@ module yend(){
         translate([0, -30, 5]){
             screwhole();
         }
-
+        translate([25, 0, 2.5]){
+          cylinder(14.51,12,12,true);
+        }
         translate([-30,9, 0]) {
             cylinder(10, d = 4, center = true);
         }
         translate([-30,-9, 0]) {
             cylinder(10, d = 4, center = true);
         }
-
-
+        translate([0,-10.5,0]){
+          cube([50,3,7],true);
+        }
+        translate([0,10.5,0]){
+          cube([50,3,7],true);
+        }
+    }
+    translate([25, 0, -4.75]){
+        bearingmount();
     }
 }
 yend();
