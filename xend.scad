@@ -12,7 +12,7 @@ module bearingmount(){
                 cylinder(1, d =12, true);
             }
         }
-        #cylinder(30, d = 4, true);
+        cylinder(30, d = 4, true);
 
     }
 }
@@ -59,19 +59,33 @@ module clamp(){
 }
 module main(){
   difference(){
-    hull(){
-      rotate([0, 90, 0]){
-        translate([0, 25, -20]){
-            cylinder(65.5, d = 15, true);
+    union(){
+      hull(){
+        rotate([0, 90, 0]){
+          translate([0, 25, -20]){
+              cylinder(65.5, d = 15, true);
+          }
+        }
+        rotate([0, 90, 0]){
+          translate([0, -25, -20]){
+              cylinder(65.5, d = 15, true);
+          }
         }
       }
-      rotate([0, 90, 0]){
-        translate([0, -25, -20]){
-            cylinder(65.5, d = 15, true);
+      hull(){
+        rotate([0, 90, 0]){
+          translate([0, 25, -30]){
+              cylinder(40, d = 20, true);
+          }
+        }
+        rotate([0, 90, 0]){
+          translate([0, -25, -30]){
+              cylinder(40, d = 20, true);
+          }
         }
       }
     }
-    translate([0, 0, -5]){
+    translate([-28.5, 0, 0]){
       #bearing();
     }
 
