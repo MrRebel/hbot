@@ -128,29 +128,29 @@ module xend(){
       clamp();
     }
     clampholes();
-    translate([-4.5, 15, 2.75]){
+    translate([-4.5, 20, 2.75]){
       cylinder(14.51,13.5,13.5,true);
     }
-    translate([-4.5, -15, 2.75]){
+    translate([-4.5, -20, 2.75]){
       cylinder(14.51,13.5,13.5,true);
     }
-    translate([-16.5,-30,0]){
+    translate([-16.5,-35,0]){
       cube([3,30,7],true);
     }
-    translate([-16.5,30,0]){
+    translate([-16.5,35,0]){
       cube([3,30,7],true);
     }
-    translate([30.5,-3,0]){
+    translate([30.5,-8,0]){
       cube([70,3,7],true);
     }
-    translate([30.5,3,0]){
+    translate([30.5,8,0]){
       cube([70,3,7],true);
     }
   }
-  translate([-5, -15, -4.5]){
+  translate([-5, -20, -4.5]){
     bearingmount();
   }
-  translate([-5, 15, -4.5]){
+  translate([-5, 20, -4.5]){
     bearingmount();
   }
 }

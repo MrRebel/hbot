@@ -1,0 +1,15 @@
+use<xcarriage.scad>;
+difference(){
+	union(){
+		cube([70,80,10],true);
+		translate([25,-20,12.5]){
+			cube([20,30,15],true);
+		}
+		translate([25,20,12.5]){
+			cube([20,30,15],true);
+		}
+		translate([-25,0,12.5]){
+			cube([20,30,15],true);
+		}
+	}
+}
