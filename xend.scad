@@ -128,22 +128,22 @@ module xend(){
       clamp();
     }
     clampholes();
-    translate([-5, 15, 2.75]){
-      cylinder(14.51,12,12,true);
+    translate([-4.5, 15, 2.75]){
+      cylinder(14.51,13.5,13.5,true);
     }
-    translate([-5, -15, 2.75]){
-      cylinder(14.51,12,12,true);
+    translate([-4.5, -15, 2.75]){
+      cylinder(14.51,13.5,13.5,true);
     }
-    translate([-15.5,-30,0]){
+    translate([-16.5,-30,0]){
       cube([3,30,7],true);
     }
-    translate([-15.5,30,0]){
+    translate([-16.5,30,0]){
       cube([3,30,7],true);
     }
-    translate([30,-4.5,0]){
+    translate([30.5,-3,0]){
       cube([70,3,7],true);
     }
-    translate([30,4.5,0]){
+    translate([30.5,3,0]){
       cube([70,3,7],true);
     }
   }
