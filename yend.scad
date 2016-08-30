@@ -55,11 +55,11 @@ module yend(){
         translate([-30,-9, 0]) {
             cylinder(10, d = 4, center = true);
         }
-        translate([0,-10.5,0]){
-          cube([50,3,7],true);
+        translate([0,-12,0]){
+          #cube([50,3,7],true);
         }
-        translate([0,10.5,0]){
-          cube([50,3,7],true);
+        translate([0,12,0]){
+          #cube([50,3,7],true);
         }
     }
     translate([25, 0, -4.75]){
