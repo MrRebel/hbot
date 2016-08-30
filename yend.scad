@@ -34,7 +34,10 @@ module yend(){
         }
         rotate([0, 0, 90]){
             translate([0, 240, 0]){
-                    bearing();
+                    rotate([90,0,0]){
+                        cylinder(500,4.1,4.1,true);
+                       
+                    }
             }
         }
         translate([0, 30, 5]){
@@ -44,7 +47,7 @@ module yend(){
             screwhole();
         }
         translate([25, 0, 2.5]){
-          cylinder(14.51,12,12,true);
+          cylinder(14.51,13.5,13.5,true);
         }
         translate([-30,9, 0]) {
             cylinder(10, d = 4, center = true);
