@@ -41,7 +41,7 @@ module yend(){
             }
         }
         translate([0, 30, 5]){
-            screwhole();
+            #screwhole();
         }
         translate([0, -30, 5]){
             screwhole();
@@ -50,10 +50,10 @@ module yend(){
           cylinder(14.51,13.5,13.5,true);
         }
         translate([-30,9, 0]) {
-            cylinder(10, d = 4, center = true);
+            #cylinder(10, d = 4, center = true);
         }
         translate([-30,-9, 0]) {
-            cylinder(10, d = 4, center = true);
+            #cylinder(10, d = 4, center = true);
         }
         translate([0,-12,0]){
           #cube([50,3,7],true);
