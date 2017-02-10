@@ -1,0 +1,98 @@
+$fn=50;
+use<xcarriage.scad>
+module clip(){
+	include<clip.scad>
+}
+module cutout(){
+	minkowski(){
+		difference(){
+			cube([35,5,20],true);
+			translate([-12,-10,0]){
+				rotate([0,0,-30]){
+					cube(30,true);
+				}
+			}
+		}
+		cylinder(.01,3,3,true);
+	}
+}
+module main(){
+	difference(){
+		union(){
+			translate([0,0,2.5]){
+				cube([71,70,5],true);
+			}
+			translate([25,-20,10]){
+				cube([21,30,10 ],true);
+			}
+			translate([25,20,10]){
+				cube([21,30,10],true);
+			}
+			translate([-25,0,10]){
+				cube([21,30,10],true);
+			}
+		}
+		translate([-36,45,0]){
+		rotate([0,0,30]){
+			cube(50,true);
+		}
+		}
+		translate([-36,-45,0]){
+		rotate([0,0,-30]){
+			cube(50,true);
+		}
+		}
+	}
+}
+module final(){
+	difference(){
+		minkowski(){
+			main();
+			cylinder(.01,1,1);
+		}
+		translate([25,-20,12.5]){
+			bearing();
+		}
+		translate([25,20,12.5]){
+			bearing();
+		}
+		translate([-25,0,12.5]){
+			bearing();
+		}
+		hull(){
+			translate([0,-10,0]){
+				cylinder(20,6,6,true);
+			}
+			translate([0,10,0]){
+				cylinder(20,6,6,true);
+			}
+		}
+		translate([-9,-27,0]){
+			cutout();
+		}
+		translate([-9,27,0]){
+			mirror([0,1,0]){
+				cutout();
+			}
+		}
+		translate([-10,0,0]){
+			cylinder(20,1.5,1.5,true);
+		}
+		translate([10,18.5,0]){
+			cylinder(20,1.5,1.5,true);
+		}
+		translate([10,-18.5,0]){
+			cylinder(20,1.5,1.5,true);
+		}
+	}
+	translate([10,0,12.5]){
+		rotate([0,0,90]){
+			clip();
+		}
+		translate([-.25,0,-7]){
+			cube([5.51,29.01,5.01],true);
+		}
+		
+	}
+}
+final();

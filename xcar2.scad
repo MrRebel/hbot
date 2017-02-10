@@ -42,9 +42,7 @@ difference(){
 }
 }
 difference(){ 
-	union(){
-		main();
-	}
+	main();
 	translate([-10.5,-45,0]){
 		cube(50,true);
 	}
