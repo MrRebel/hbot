@@ -1,4 +1,4 @@
-$fn=50;
+$fn=100;
 use<xcarriage.scad>
 module clip(){
 	include<clip.scad>
