@@ -85,7 +85,10 @@ module main(){
         }
       }
     }
-    translate([-28.5, 0, 0]){
+    translate([-28.5, 17, 0]){
+      bearing();
+    }
+	 translate([-28.5, - 17, 0]){
       bearing();
     }
 
